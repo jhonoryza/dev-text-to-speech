@@ -28,7 +28,7 @@ function setup() {
 
   buttonSave = createButton('save');
   buttonSave.position(250,65);
-  buttonSave.mousePressed(greet);
+  buttonSave.mousePressed(goUrl);
 
   buttonTest = createButton('p5.speech.js test api');
   buttonTest.position(150,100);
@@ -62,13 +62,12 @@ function setup() {
   soundFile = new p5.SoundFile();
 
   // link = createA('http://p5js.org/', 'this is a link', "blank");
-  link = document.createElement('a');
+  // link = document.createElement('a');
   // link.textContent = 'Save to Mp3';
   //link.href = "https://code.responsivevoice.org/getvoice.php?t=selamat%20datang&tl=id&sv=&vn=&pitch=0.5&rate=0.5&vol=1";
-  // document.getElementById('where_to_insert').innerHTML = "";
-  // document.getElementById('where_to_insert').href = "https://code.responsivevoice.org/getvoice.php?t=selamat%20datang&tl=id&sv=&vn=&pitch=0.5&rate=0.5&vol=1";
- 
-  //document.getElementById('where_to_insert').download
+  document.getElementById('where_to_insert').innerHTML = "";
+  document.getElementById('where_to_insert').href = "https://code.responsivevoice.org/getvoice.php?t=selamat%20datang&tl=id&sv=&vn=&pitch=0.5&rate=0.5&vol=1";
+  document.getElementById('where_to_insert').download = "play";
   }
 
 function draw() {
@@ -128,13 +127,13 @@ function goUrl(){
 }
 function changeUrl(){
   //document.getElementById('where_to_insert').innerHTML = "stupid";
-  // document.getElementById('where_to_insert').href = url;
-  // document.getElementById('where_to_insert').click();
-  link.href = url;
-  // link.name = 'haha';
-  link.download = "voice-me.mp3";
-  //link.attribute("download", "voiceTest.mp3");
-  link.click();
+  document.getElementById('where_to_insert').href = url;
+  document.getElementById('where_to_insert').click();
+  // link.href = url;
+  // // link.name = 'haha';
+  // link.download = "voice-me.mp3";
+  // //link.attribute("download", "voiceTest.mp3");
+  // link.click();
   // link.mouseClicked(mee);
 }
 function mee(){
