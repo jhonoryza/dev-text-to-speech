@@ -14,67 +14,87 @@ var selectKorNum, selectHalNum;
 var buttonKorNum, buttonHalNum;
 
 function setup() {
-  //createCanvas(710, 400);
-  // foo = new p5.Speech(); // speech synthesis object
-  // foo.setVoice('Bahasa Indonesia');
-  //foo.setVoice('native');
-
-  //fill(150);
-  //stroke(0);
   noCanvas();
+  var head = createElement('h1', 'hello world')
+  head.class('title');
   
-  greeting = createElement('h2', 'text to speech');
-  greeting.position(20, 5);
-  greeting.class('lemon');
+  var inputUser = createElement('div');
+  inputUser.class('box');
+  
+  greeting = createElement('t', 'input text');
+  greeting.style('margin', '0px 47px 0px 5px');
+  greeting.class('textBox');
   input = createInput();
-  input.position(20, 65);
+  input.class('inputBox');
   button = createButton('play');
-  button.position(200, 65);
+  button.class('tombol');
   button.mousePressed(greet);
   downloadFile = createA('#', 'save as mp3');
-  downloadFile.position(270, 65);
   downloadFile.class('link');
-
-  var textKorNum = createElement('span', 'jumlah koridor'); 
-  textKorNum.class('lemon');
-  textKorNum.position(20, 120);
+  var nl = createElement('br');
+  var textKorNum = createElement('t', 'jumlah koridor'); 
+  textKorNum.style('margin', '0px 10px 0px 5px');
+  textKorNum.class('textBox');
   selectKorNum = createInput();
-  selectKorNum.position(130, 120);
-  var textKorHal = createSpan('jumlah halte'); 
-  textKorHal.class('lemon');
-  textKorHal.position(20, 150);
-  selectHalNum = createInput();
-  selectHalNum.position(130, 150);
+  selectKorNum.class('inputBox');
+  selectKorNum.changed(checkInput);
   buttonKorNum = createButton('create');
-  buttonKorNum.position(290, 150);
+  buttonKorNum.class('tombol');
   buttonKorNum.mousePressed(createList);
-}
 
+  inputUser.child(greeting);
+  inputUser.child(input);
+  inputUser.child(button);
+  inputUser.child(downloadFile);
+  inputUser.child(nl);
+  inputUser.child(textKorNum);
+  inputUser.child(selectKorNum);
+  inputUser.child(buttonKorNum);
+  
+}
+function checkInput(){
+  var data = selectKorNum.value();
+  if(isNaN(data)){
+    //not number
+    alert("fill in number");
+  }
+  else{
+    //its number
+    //alert("correct");
+  }
+}
 function draw() {
   background(255);
 }
 var me = [];
+var textTitle = [];
+var inputHal = [];
+var buttonHal = [];
 function createList(){
   var numKor = selectKorNum.value();
-  var numHal = selectHalNum.value();
-  selectKorNum.value('');
-  selectHalNum.value('');
-  
-  
+
   for(var i=1; i<=me.length; i++){
     if(me[i] != null)
       me[i].remove();
   }
-  for(var i=1; i<=numKor; i++){
-    me[i] = createElement('Div', 'koridor ' +i);
-    me[i].class('lemon');
-    me[i].position(20, 180+(i*30));
-  }
   
-  for(var i=1; i<=numHal; i++){
-    me[i] = createInput();
-    me[i].position(20, 'auto');
+  for(var i=1; i<=numKor; i++){
+    me[i] = createElement('div');
+    me[i].class('box');
+    
+    textTitle[i] = createElement('p', 'koridor ' +i);
+    textTitle[i].class('title');
+    
+    inputHal[i] = createElement('input');
+    inputHal[i].class('inputBox');
+    buttonHal[i] = createElement('button', 'create');
+    buttonHal[i].class('tombol');
+    
+    me[i].child(textTitle[i]);
+    me[i].child(inputHal[i]);
+    me[i].child(buttonHal[i]);
   }
+
 }
 
 function greet() {

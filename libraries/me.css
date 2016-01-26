@@ -1,0 +1,58 @@
+.lemon {
+ 
+ /*font-size: 100%;*/
+ /*font-weight: normal;*/
+ /*font-variant: normal;*/
+ /*font-style:normal;*/
+ /*font-family: 'Roboto Mono';*/
+ font-family: 'Source Sans Pro';
+ color: grey;
+}
+
+.link{
+ /*font-weight: normal;*/
+ /*font-variant: normal;*/
+ /*font-style:normal;*/
+ /*font-family: Roboto'Roboto Mono';*/
+ color: red;
+ margin: 10px;
+ font-family: 'Source Sans Pro';
+}
+
+.tombol {
+ font-family: 'Source Sans Pro';
+ background-color: grey; 
+ border: none;
+ border-radius: 3px;
+ color: white;
+ text-align: center;
+ text-decoration: none;
+ width: 60px;
+ margin: 10px;
+}
+
+.box {
+ font-family: 'Source Sans Pro';
+ border-radius: 10px;
+ margin: 5px 0px 5px 0px;
+ border: 0.02em solid black;
+}
+
+.title {
+ font-weight: bold;
+ font-family: 'Source Sans Pro';
+ color: grey;
+ margin: 0px 0px 0px 10px;
+}
+
+.inputBox{
+  margin: 0px 0px 0px 10px;
+  border-radius: 3px;
+}
+
+.textBox{
+ font-family: 'Source Sans Pro';
+ font-weight: bold;
+ color: grey;
+}
+
