@@ -14,6 +14,7 @@
  /*font-variant: normal;*/
  /*font-style:normal;*/
  /*font-family: Roboto'Roboto Mono';*/
+ text-decoration: none;
  color: red;
  margin: 10px;
  font-family: 'Source Sans Pro';
@@ -28,14 +29,14 @@
  text-align: center;
  text-decoration: none;
  width: 60px;
- margin: 10px;
+ margin: 5px 5px 10px 10px;
 }
 
 .box {
  font-family: 'Source Sans Pro';
  border-radius: 10px;
  margin: 10px 0px 10px 0px;
- border: 0.02em solid black;
+ /*border: 0.02em solid black;*/
 }
 
 .title {
@@ -43,13 +44,6 @@
  font-family: 'Source Sans Pro';
  color: grey;
  margin: 0px 0px 0px 10px;
-}
-
-.inputBox{
-  margin: 0px 0px 0px 10px;
-  border-radius: 3px;
-  font-family: 'Source Sans Pro';
-  color: grey;
 }
 
 .inputBoxHalte{
@@ -65,6 +59,12 @@
  font-family: 'Source Sans Pro';
  font-weight: bold;
  color: grey;
- margin-left: 5px;
+ margin: 5px 0px 5px 10px;
 }
 
+.inputBox{
+  margin: 5px 0px 5px 10px;
+  border-radius: 3px;
+  font-family: 'Source Sans Pro';
+  color: grey;
+}
