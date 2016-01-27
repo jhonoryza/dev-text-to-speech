@@ -34,7 +34,7 @@
 .box {
  font-family: 'Source Sans Pro';
  border-radius: 10px;
- margin: 5px 0px 5px 0px;
+ margin: 10px 0px 10px 0px;
  border: 0.02em solid black;
 }
 
@@ -48,11 +48,23 @@
 .inputBox{
   margin: 0px 0px 0px 10px;
   border-radius: 3px;
+  font-family: 'Source Sans Pro';
+  color: grey;
+}
+
+.inputBoxHalte{
+  margin: 5px 5px 10px 10px;
+  width: 700px;
+  height: 300px;
+  border-radius: 3px;
+  font-family: 'Source Sans Pro';
+  color: grey;
 }
 
 .textBox{
  font-family: 'Source Sans Pro';
  font-weight: bold;
  color: grey;
+ margin-left: 5px;
 }
 
