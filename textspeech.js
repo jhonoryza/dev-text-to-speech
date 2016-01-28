@@ -181,8 +181,9 @@ function saveTextAsFile()
   for(var i=1; i<=numKor; i++){
     var textFile = inputHal[i].value();
     if(textFile != null){
-    	var textToWrite = trim(textFile);
-    // 	textToWrite = textToWrite.replace(/\n/g,' \r\n');
+    	//var textToWrite = trim(textFile);
+    var	textToWrite = textFile.replace(/\n/g,'');
+    //textToWrite = textFile.replace(/\r/g,'');
     //textToWrite = textToWrite.split('n').join('\r\n');
     	console.log(textToWrite);
       save(textToWrite, 'koridor-'+i+'-go.txt');    
@@ -191,9 +192,9 @@ function saveTextAsFile()
   for(var i=1; i<=numKor; i++){
     var textFile = inputHalP[i].value();
     if(textFile != null){
-    	var textToWrite = trim(textFile);
-    // 	textToWrite = textToWrite.replace(/\n/g,' \r\n');
-     //textToWrite = textToWrite.split('n').join('\r\n');
+    	//var textToWrite = trim(textFile);
+     var	textToWrite = textFile.replace(/\n/g,'');
+  // var textToWrite = textFile.split('n').join('\r\n');
     	console.log(textToWrite);
       save(textToWrite, 'koridor-'+i+'-back.txt');
     }
